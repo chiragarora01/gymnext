@@ -1,0 +1,374 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Sign up - srtdash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="static/z_assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="static/z_assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/z_assets/css/metisMenu.css">
+    <link rel="stylesheet" href="static/z_assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+    <!-- others css -->
+    <link rel="stylesheet" href="static/z_assets/css/typography.css">
+    <link rel="stylesheet" href="static/z_assets/css/default-css.css">
+    <link rel="stylesheet" href="static/z_assets/css/styles.css">
+    <link rel="stylesheet" href="static/z_assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="static/z_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+    <style>
+        #bndhoka {
+            display: flex;
+        }
+
+        #bndhoka1 {
+            display: none;
+        }
+
+        #bndpay {
+            display: none;
+            transition: all 1s linear;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+<!-- preloader area end -->
+<!-- login area start -->
+<div class="login-area login-s2" id="bndhoka">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <form action="javascript:void(0);">
+                <div class="login-form-head">
+                    <h4>Sign up</h4>
+                    <p>Hello there, Sign up and Join with Us</p>
+                </div>
+                <div class="login-form-body">
+                    <div class="form-gp">
+                        <label for="exampleInputName1">Full Name</label>
+                        <input type="text" id="Full_name" name="name">
+                        <i class="ti-user"></i>
+                        <div class="text-danger"></div>
+                    </div>
+                    <div class="form-gp">
+                        <label for="exampleInputEmail1">Contact</label>
+                        <input type="number" id="Contact_full" name="contact">
+                        <i class="ti-email"></i>
+                        <div class="text-danger"></div>
+                    </div>
+                    <div class="form-gp">
+                        <label for="exampleInputPassword1">Address</label>
+                        <input type="text" id="address_full" name="address">
+                        <i class="ti-lock"></i>
+                        <div class="text-danger"></div>
+                    </div>
+                    {#                        <div class="form-gp">#}
+                    {#                            <label for="exampleInputPassword2">Confirm Password</label>#}
+                    {#                            <input type="password" id="exampleInputPassword2">#}
+                    {#                            <i class="ti-lock"></i>#}
+                    {#                            <div class="text-danger"></div>#}
+                    {#                        </div>#}
+                    <div class="submit-btn-area">
+                        <button class="updatebutton" id="form_submit" type="submit">Submit <i
+                                class="ti-arrow-right"></i></button>
+                        <div class="login-other row mt-4">
+                            <div class="col-6">
+                                <a class="fb-login" href="#">Sign up with <i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="col-6">
+                                <a class="google-login" href="#">Sign up with <i class="fa fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer text-center mt-5">
+                        <p class="text-muted">Don't have an account?
+                            <button onclick="myFunction()">Sign in</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{#########################}
+<div class="login-area login-s2" id="bndhoka1">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <form action="javascript:void(0);">
+                <div class="login-form-head">
+                    <h4>Sign In</h4>
+                    <p>Hello there, Sign In and Join with Us</p>
+                </div>
+                <div class="login-form-body">
+                    <div class="form-gp">
+                        <label for="exampleInputName1">Membership Id</label>
+                        <input type="number" id="going_in" name="name">
+                        <i class="ti-user"></i>
+                        <div class="text-danger" id="text-danger"></div>
+                    </div>
+                    {% with message=get_flashed_messages() %}
+                        {% if message %}
+                            {% for mes in message %}
+                                <H3>{{ mes }}</H3>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                    <div class="submit-btn-area">
+                        <button class="updatebutton1" id="form_submit" type="submit">Submit <i
+                                class="ti-arrow-right"></i></button>
+                        <div class="login-other row mt-4">
+                            <div class="col-6">
+                                <a class="fb-login" href="#">Sign up with <i class="fa fa-facebook"></i></a>
+                            </div>
+                            <div class="col-6">
+                                <a class="google-login" href="#">Sign up with <i class="fa fa-google"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-footer text-center mt-5">
+                        <p class="text-muted">Don't have an account?
+                            <button onclick="myFunction1()">Sign UP</button>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{#########################}
+<!-- login area end -->
+<div class="login-area login-s2" id="bndpay">
+    <div class="container">
+        <div class="login-box ptb--100">
+            <table style="width:100%" class="fixed">
+
+                <td><img
+                        src="data:image/png;base64,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">
+                </td>
+                <td>
+                    <div class="login-box ptb--100">
+                        <form action="/payed" method="POST">
+                            <div class="login-form-body">
+                                <div class="form-gp">
+                                    <label for="exampleInputName1"></label>
+                                    <input type="text" id="paying" name="mem_id" readonly>
+                                    <i class="ti-user"></i>
+                                    <div class="text-danger"></div>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="exampleInputName1"></label>
+                                    <input type="text" id="paying_name" name="name" readonly>
+                                    <i class="ti-user"></i>
+                                    <div class="text-danger"></div>
+                                </div>
+                                <select name="offer_id" id="cars" class="updatepayment">
+                                    {% for f in offer %}
+                                        <option value="{{ f.0 }}" id="{{ f.2 }}">{{ f.1 }} || {{ f.2 }}</option>
+                                    {% endfor %}
+                                </select>
+                                <br>
+                                <div class="form-gp">
+                                    <br>
+                                    {#                                    <label for="exampleInputEmail">Amount</label>#}
+                                    <input type="number" id="amounting" name="contact" placeholder="Amount" value="1500"
+                                           readonly>
+                                    <i class="ti-email"></i>
+                                    <div class="text-danger"></div>
+                                </div>
+                                <div class="form-gp">
+                                    <label for="exampleInputName1">Payment Id</label>
+                                    <input type="text" id="payment" name="pay_id">
+                                    <b onclick="checkpayid()" > <button>Click Here (To validate payment id)</button></b>
+                                    <div class="text-danger" id="war"></div>
+                                </div>
+                                <div class="submit-btn-area">
+                                    <button class="finalpay" id="form_submit" type="submit">Submit <i
+                                            class="ti-arrow-right"></i></button>
+                                    <div class="login-other row mt-4">
+                                        <div class="col-6">
+                                            <a class="fb-login" href="#">Sign up with <i class="fa fa-facebook"></i></a>
+                                        </div>
+                                        <div class="col-6">
+                                            <a class="google-login" href="#">Sign up with <i
+                                                    class="fa fa-google"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </td>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- jquery latest version -->
+<script src="static/z_assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="static/z_assets/js/popper.min.js"></script>
+<script src="static/z_assets/js/bootstrap.min.js"></script>
+<script src="static/z_assets/js/owl.carousel.min.js"></script>
+<script src="static/z_assets/js/metisMenu.min.js"></script>
+<script src="static/z_assets/js/jquery.slimscroll.min.js"></script>
+<script src="static/z_assets/js/jquery.slicknav.min.js"></script>
+
+<!-- others plugins -->
+<script src="static/z_assets/js/plugins.js"></script>
+<script src="static/z_assets/js/scripts.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.updatebutton').on('click', function () {
+            console.log("yo");
+            var name = document.getElementById('Full_name').value;
+            var contact = document.getElementById('Contact_full').value;
+            var address = document.getElementById('address_full').value;
+
+            console.log(name);
+            console.log(contact);
+            console.log(address);
+            console.log("yo");
+
+            req = $.ajax({
+                url: '/insert',
+                type: 'POST',
+                data: {name: name, contact: contact, address: address}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da.id);
+                console.log(da[1]);
+                if (da.result == "success")
+                    document.getElementById("bndhoka").style.display = "none";
+                document.getElementById("bndpay").style.display = "flex";
+                console.log(da[1]);
+                console.log(da[0]);
+                console.log(da.mem_id);
+                console.log(da.result);
+                console.log(da.name);
+                document.getElementById('paying').value = da.mem_id;
+                document.getElementById('paying_name').value = da.name;
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.updatebutton1').on('click', function () {
+            console.log("yo");
+            var name = document.getElementById('going_in').value;
+            console.log(name);
+            req = $.ajax({
+                url: '/pee',
+                type: 'POST',
+                data: {name: name}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                if (da.result == "failed")
+                    document.getElementById('text-danger').innerText="Enter Valid Membership Id";
+                if (da.result == "success")
+                    document.getElementById("bndhoka1").style.display = "none";
+
+                document.getElementById("bndpay").style.display = "flex";
+
+                console.log(da.name);
+                console.log(da.mem_id);
+                document.getElementById('paying').value = da.mem_id;
+                document.getElementById('paying_name').value = da.name;
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.updatepayment').on('click', function () {
+            console.log("yo");
+            var name = document.getElementById('cars').value;
+            console.log(name);
+            req = $.ajax({
+                url: '/peeling',
+                type: 'POST',
+                data: {name: name}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                {#console.log(da.val);#}
+                document.getElementById('amounting').value = da.name;
+            });
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $('.finalpay').on('click', function () {
+            console.log("yo");
+            var mem_id = document.getElementById('paying').value;
+            var pay_id = document.getElementById('payment').value;
+            var offer_id = document.getElementById('cars').value;
+            console.log(pay_id);
+            console.log(mem_id);
+            console.log(offer_id);
+
+            req = $.ajax({
+                url: '/payed',
+                type: 'POST',
+                data: {pay_id: pay_id, mem_id: mem_id, offer_id: offer_id}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da.val);
+                document.getElementById('amount').value = da.val;
+            });
+        });
+    });
+</script>
+<script>
+    function checkpayid(){
+        var z = document.getElementById('payment').value;
+        console.log(z);
+        req = $.ajax({
+                url: '/checking',
+                type: 'POST',
+                data: {pay_id: z}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da.result);
+                if (da.result=="failed"){
+                    console.log("ypiioo");
+                    document.getElementById('war').innerHTML="Payment Id already registered";}
+                else{
+                    document.getElementById('war').innerHTML="";}
+                {#document.getElementById('amount').value = da.val;#}
+            });
+    }
+</script>
+<script>
+    function myFunction() {
+        document.getElementById('bndhoka1').style.display = "flex";
+        document.getElementById('bndhoka').style.display = "none"
+    }
+
+    function myFunction1() {
+        document.getElementById('bndhoka').style.display = "flex";
+        document.getElementById('bndhoka1').style.display = "none"
+    }
+</script>
+</body>
+
+</html>

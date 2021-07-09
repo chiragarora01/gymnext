@@ -1,0 +1,2566 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>GYM NEXT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="static/z_assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="static/z_assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/z_assets/css/metisMenu.css">
+    <link rel="stylesheet" href="static/z_assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/slicknav.min.css">
+    <!-- amchart css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+    <!-- others css -->
+    <link rel="stylesheet" href="static/z_assets/css/typography.css">
+    <link rel="stylesheet" href="static/z_assets/css/default-css.css">
+    <link rel="stylesheet" href="static/z_assets/css/styles.css">
+    <link rel="stylesheet" href="static/z_assets/css/responsive.css">
+    <!-- modernizr css -->
+    {#    <script src="scripts/jquery.js"></script>#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script src="static/z_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body class="body-bg">
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <table style="margin: 20px;padding:20px">
+
+                <tr style="margin: 20px;padding:20px">
+                    <th>Name</th>
+                    <th>Shoulder</th>
+                    <th>Chest</th>
+                    <th>Arms</th>
+                    <th>Legs</th>
+                    <th>Back_abs</th>
+                    <th>TOTAL</th>
+                </tr>
+                <tbody id="myTable">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--[if lt IE 8]>
+{#<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade#}
+{#    your browser</a> to improve your experience.</p>#}
+<![endif]-->
+<!-- preloader area start -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+<!-- preloader area end -->
+<!-- main wrapper start -->
+<div class="horizontal-main-wrapper">
+    <!-- main header area start -->
+    <div class="mainheader-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        GYM NEXT
+                    </div>
+                </div>
+                <!-- profile info & task notification -->
+                <div class="col-md-9 clearfix text-right">
+                    <div class="d-md-inline-block d-block mr-md-4">
+                        <ul class="notification-area">
+                            <li id="full-view"><i class="ti-fullscreen"></i></li>
+
+
+                        </ul>
+                    </div>
+                    <div class="clearfix d-md-inline-block d-block">
+                        <div class="user-profile m-0">
+                            <img class="avatar user-thumb" src="static/z_assets/images/author/avatar.png" alt="avatar">
+                            <h4 class="user-name dropdown-toggle" data-toggle="dropdown">{{ name }} <i
+                                    class="fa fa-angle-down"></i></h4>
+                            <div class="dropdown-menu">
+                                {#                                    <a class="dropdown-item" href="#">Message</a>#}
+                                <a class="dropdown-item" href="#" id="bottle">{{ id }}</a>
+                                <a class="dropdown-item" href="/logout">Log Out</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- main header area end -->
+    <!-- header area start -->
+    <div class="header-area header-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9  d-none d-lg-block">
+                    <div class="horizontal-menu">
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+
+                        {#                            <nav>#}
+                        {#                                <ul id="nav_menu">#}
+                        {#                                    <li>#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-dashboard"></i><span>dashboard</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="index.html">ICO dashboard</a></li>#}
+                        {#                                            <li><a href="index2.html">Ecommerce dashboard</a></li>#}
+                        {#                                            <li><a href="index3.html">SEO dashboard</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li class="active">#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-layout-sidebar-left"></i><span>Sidebar#}
+                        {#                                                Types</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="index.html">Left Sidebar</a></li>#}
+                        {#                                            <li class="active"><a href="index3-horizontalmenu.html">Horizontal Sidebar</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li>#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-pie-chart"></i><span>Charts</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="barchart.html">bar chart</a></li>#}
+                        {#                                            <li><a href="linechart.html">line Chart</a></li>#}
+                        {#                                            <li><a href="piechart.html">pie chart</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li class="mega-menu">#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-palette"></i><span>UI Features</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="accordion.html">Accordion</a></li>#}
+                        {#                                            <li><a href="alert.html">Alert</a></li>#}
+                        {#                                            <li><a href="badge.html">Badge</a></li>#}
+                        {#                                            <li><a href="button.html">Button</a></li>#}
+                        {#                                            <li><a href="button-group.html">Button Group</a></li>#}
+                        {#                                            <li><a href="cards.html">Cards</a></li>#}
+                        {#                                            <li><a href="dropdown.html">Dropdown</a></li>#}
+                        {#                                            <li><a href="list-group.html">List Group</a></li>#}
+                        {#                                            <li><a href="media-object.html">Media Object</a></li>#}
+                        {#                                            <li><a href="modal.html">Modal</a></li>#}
+                        {#                                            <li><a href="pagination.html">Pagination</a></li>#}
+                        {#                                            <li><a href="popovers.html">Popover</a></li>#}
+                        {#                                            <li><a href="progressbar.html">Progressbar</a></li>#}
+                        {#                                            <li><a href="tab.html">Tab</a></li>#}
+                        {#                                            <li><a href="typography.html">Typography</a></li>#}
+                        {#                                            <li><a href="form.html">Form</a></li>#}
+                        {#                                            <li><a href="grid.html">grid system</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li class="mega-menu">#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-layers-alt"></i> <span>Pages</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="login.html">Login</a></li>#}
+                        {#                                            <li><a href="login2.html">Login 2</a></li>#}
+                        {#                                            <li><a href="login3.html">Login 3</a></li>#}
+                        {#                                            <li><a href="register.html">Register</a></li>#}
+                        {#                                            <li><a href="register2.html">Register 2</a></li>#}
+                        {#                                            <li><a href="register3.html">Register 3</a></li>#}
+                        {#                                            <li><a href="register4.html">Register 4</a></li>#}
+                        {#                                            <li><a href="screenlock.html">Lock Screen</a></li>#}
+                        {#                                            <li><a href="screenlock2.html">Lock Screen 2</a></li>#}
+                        {#                                            <li><a href="reset-pass.html">reset password</a></li>#}
+                        {#                                            <li><a href="pricing.html">Pricing</a></li>#}
+                        {#                                            <li><a href="404.html">Error 404</a></li>#}
+                        {#                                            <li><a href="500.html">Error 500</a></li>#}
+                        {#                                            <li><a href="invoice.html"><i class="ti-receipt"></i> <span>Invoice Summary</span></a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li>#}
+                        {#                                        <a href="javascript:void(0)"><i class="ti-slice"></i><span>icons</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="fontawesome.html">fontawesome icons</a></li>#}
+                        {#                                            <li><a href="themify.html">themify icons</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li>#}
+                        {#                                        <a href="javascript:void(0)"><i class="fa fa-table"></i>#}
+                        {#                                            <span>Tables</span></a>#}
+                        {#                                        <ul class="submenu">#}
+                        {#                                            <li><a href="table-basic.html">basic table</a></li>#}
+                        {#                                            <li><a href="table-layout.html">table layout</a></li>#}
+                        {#                                            <li><a href="datatable.html">datatable</a></li>#}
+                        {#                                        </ul>#}
+                        {#                                    </li>#}
+                        {#                                    <li><a href="maps.html"><i class="ti-map-alt"></i> <span>maps</span></a></li>#}
+                        {#                                </ul>#}
+                        {#                            </nav>#}
+
+
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+                        {#                            ######################################################################}
+
+                    </div>
+                </div>
+                <!-- nav and search button -->
+                {#                    <div class="col-lg-3 clearfix">#}
+                {#                        <div class="search-box">#}
+                {#                            <form action="#">#}
+                {#                                <input type="text" name="search" placeholder="Search..." required>#}
+                {#                                <i class="ti-search"></i>#}
+                {#                            </form>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                <!-- mobile_menu -->
+                <div class="col-12 d-block d-lg-none">
+                    <div id="mobile_menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header area end -->
+    <!-- page title area end -->
+    <div class="main-content">
+        <!-- header area start -->
+        <div class="header-area">
+            {#        <div class="row align-items-center">#}
+            {#            <!-- nav and search button -->#}
+            {#            <div class="col-md-6 col-sm-8 clearfix">#}
+            {#                <div class="nav-btn pull-left">#}
+            {#                    <span></span>#}
+            {#                    <span></span>#}
+            {#                    <span></span>#}
+            {#                </div>#}
+            {#                    <div class="search-box pull-left">#}
+            {#                        <form action="#">#}
+            {#                            <input type="text" name="search" placeholder="Search..." required>#}
+            {#                            <i class="ti-search"></i>#}
+            {#                        </form>#}
+            {#                    </div>#}
+            {#            </div>#}
+            {#            <!-- profile info & task notification -->#}
+            {#            <div class="col-md-6 col-sm-4 clearfix">#}
+            {#                <ul class="notification-area pull-right">#}
+            {#                    <li id="full-view"><i class="ti-fullscreen"></i></li>#}
+            {#                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li>#}
+            {#                        <li class="dropdown">#}
+            {#                            <i class="ti-bell dropdown-toggle" data-toggle="dropdown">#}
+            {#                                <span>2</span>#}
+            {#                            </i>#}
+            {#                            <div class="dropdown-menu bell-notify-box notify-box">#}
+            {#                                <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>#}
+            {#                                <div class="nofity-list">#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>You have Changed Your Password</p>#}
+            {#                                            <span>Just Now</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>New Commetns On Post</p>#}
+            {#                                            <span>30 Seconds ago</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Some special like you</p>#}
+            {#                                            <span>Just Now</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>New Commetns On Post</p>#}
+            {#                                            <span>30 Seconds ago</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Some special like you</p>#}
+            {#                                            <span>Just Now</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>You have Changed Your Password</p>#}
+            {#                                            <span>Just Now</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>You have Changed Your Password</p>#}
+            {#                                            <span>Just Now</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </li>#}
+            {#                        <li class="dropdown">#}
+            {#                            <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>#}
+            {#                            <div class="dropdown-menu notify-box nt-enveloper-box">#}
+            {#                                <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>#}
+            {#                                <div class="nofity-list">#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img1.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">Hey I am waiting for you...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img2.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">When you can connect with me...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img3.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">I missed you so much...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img4.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">Your product is completely Ready...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img2.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">Hey I am waiting for you...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img1.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">Hey I am waiting for you...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                    <a href="#" class="notify-item">#}
+            {#                                        <div class="notify-thumb">#}
+            {#                                            <img src="static/z_assets/images/author/author-img3.jpg" alt="image">#}
+            {#                                        </div>#}
+            {#                                        <div class="notify-text">#}
+            {#                                            <p>Aglae Mayer</p>#}
+            {#                                            <span class="msg">Hey I am waiting for you...</span>#}
+            {#                                            <span>3:15 PM</span>#}
+            {#                                        </div>#}
+            {#                                    </a>#}
+            {#                                </div>#}
+            {#                            </div>#}
+            {#                        </li>#}
+            {#                        <li class="settings-btn">#}
+            {#                            <i class="ti-settings"></i>#}
+            {#                        </li>#}
+            {#                </ul>#}
+            {#            </div>#}
+            {#        </div>#}
+            {#    </div>#}
+            <!-- header area end -->
+            <!-- page title area start -->
+            {#    <div class="page-title-area">#}
+            {#        <div class="row align-items-center">#}
+            {#            <div class="col-sm-6">#}
+            {#                <div class="breadcrumbs-area clearfix">#}
+            {#                    <h4 class="page-title pull-left">Dashboard</h4>#}
+            {#                    <ul class="breadcrumbs pull-left">#}
+            {#                        <li><a href="index.html">Home</a></li>#}
+            {#                        <li><span>Dashboard</span></li>#}
+            {#                    </ul>#}
+            {#                </div>#}
+            {#            </div>#}
+            {#            <div class="col-sm-6 clearfix">#}
+            {#                <div class="user-profile pull-right">#}
+            {#                    <img class="avatar user-thumb" src="static/z_assets/images/author/avatar.png"#}
+            {#                         alt="avatar">#}
+            {#                    <h4 class="user-name dropdown-toggle" data-toggle="dropdown">name<i#}
+            {#                            class="fa fa-angle-down"></i></h4>#}
+            {#                    <div class="dropdown-menu">#}
+            {#                            <a class="dropdown-item" href="#">Message</a>#}
+            {#                            <a class="dropdown-item" href="#">Settings</a>#}
+            {#                        <a class="dropdown-item" href="#">Log Out</a>#}
+            {#                    </div>#}
+            {#                </div>#}
+            {#            </div>#}
+            {#        </div>#}
+            {#    </div>#}
+            <!-- page title area end -->
+            <div class="main-content-inner">
+                <!-- sales report area start -->
+                <div class="sales-report-area mt-5 mb-5">
+                    <div class="row">
+                        {#                    <div class="col-md-12">#}
+                        {#                        <div class="card">#}
+                        {#                            <div class="card-body">#}
+                        {#                                <div id="amlinechart4"></div>#}
+                        {#                            </div>#}
+                        {#                        </div>#}
+                        {#                    </div>#}
+                        <!-- overview area start -->
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h4 class="header-title mb-0">Overview</h4>
+                                        {#                                <select class="custome-select border-0 pr-3">#}
+                                        {#                                    <option selected>Last 24 Hours</option>#}
+                                        {#                                    <option value="0">01 July 2018</option>#}
+                                        {#                                </select>#}
+                                    </div>
+                                    <div id="amlinechart4"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 coin-distribution">
+                            <div class="card h-full">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-0">Over View</h4>
+                                    <div id="pie_chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- overview area end -->
+                        {#                        piechart#}
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Today's Chart</h2>
+                                        <span> avg of back/abs</span>
+                                    </div>
+
+                                    <div id="pie_today" style="margin:10px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                    shoulder#}
+
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Shoulder</h2>
+                                        {#                                        <span> avg of back/abs</span>#}
+                                    </div>
+
+                                    <div id="shoulder"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {#                    Chest#}
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Chest</h2>
+                                        {#                                        <span> avg of back/abs</span>#}
+                                    </div>
+
+                                    <div id="chest"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                    arms#}
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Arms</h2>
+                                        {#                                        <span> avg of back/abs</span>#}
+                                    </div>
+
+                                    <div id="arms"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                    legs#}
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Legs</h2>
+                                        {#                                        <span> avg of back/abs</span>#}
+                                    </div>
+                                    <div id="Legs"></div>
+                                </div>
+                            </div>
+                        </div>
+                        {#                    back_abs#}
+                        <div class="col-lg-6 mt-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <h2>Back / Abs</h2>
+                                        {#                                        <span> avg of back/abs</span>#}
+                                    </div>
+                                    <div id="Back_abs"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- sales report area end -->
+
+                {#            <!-- market value area start -->#}
+                {#            <div class="row mt-5 mb-5">#}
+                {#                <div class="col-12">#}
+                {#                    <div class="card">#}
+                {#                        <div class="card-body">#}
+                {#                            <div class="d-sm-flex justify-content-between align-items-center">#}
+                {#                                <h4 class="header-title mb-0">Market Value And Trends</h4>#}
+                {#                                <select class="custome-select border-0 pr-3">#}
+                {#                                    <option selected>Last 24 Hours</option>#}
+                {#                                    <option value="0">01 July 2018</option>#}
+                {#                                </select>#}
+                {#                            </div>#}
+                {#                            <div class="market-status-table mt-4">#}
+                {#                                <div class="table-responsive">#}
+                {#                                    <table class="dbkit-table">#}
+                {#                                        <tr class="heading-td">#}
+                {#                                            <td class="mv-icon">Logo</td>#}
+                {#                                            <td class="coin-name">Coin Name</td>#}
+                {#                                            <td class="buy">Buy</td>#}
+                {#                                            <td class="sell">Sells</td>#}
+                {#                                            <td class="trends">Trends</td>#}
+                {#                                            <td class="attachments">Attachments</td>#}
+                {#                                            <td class="stats-chart">Stats</td>#}
+                {#                                        </tr>#}
+                {#                                        <tr>#}
+                {#                                            <td class="mv-icon"><img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/icon1.png" alt="icon">#}
+                {#                                            </td>#}
+                {#                                            <td class="coin-name">Dashcoin</td>#}
+                {#                                            <td class="buy">30% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-down.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="sell">20% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-up.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="trends"><img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/trends-up-icon.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="attachments">$ 56746,857</td>#}
+                {#                                            <td class="stats-chart">#}
+                {#                                                <canvas id="mvaluechart"></canvas>#}
+                {#                                            </td>#}
+                {#                                        </tr>#}
+                {#                                        <tr>#}
+                {#                                            <td class="mv-icon">#}
+                {#                                                <div class="mv-icon"><img#}
+                {#                                                        src="static/z_assets/images/icon/market-value/icon2.png"#}
+                {#                                                        alt="icon"></div>#}
+                {#                                            </td>#}
+                {#                                            <td class="coin-name">LiteCoin</td>#}
+                {#                                            <td class="buy">30% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-down.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="sell">20% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-up.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="trends"><img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/trends-down-icon.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="attachments">$ 56746,857</td>#}
+                {#                                            <td class="stats-chart">#}
+                {#                                                <canvas id="mvaluechart2"></canvas>#}
+                {#                                            </td>#}
+                {#                                        </tr>#}
+                {#                                        <tr>#}
+                {#                                            <td class="mv-icon">#}
+                {#                                                <div class="mv-icon"><img#}
+                {#                                                        src="static/z_assets/images/icon/market-value/icon3.png"#}
+                {#                                                        alt="icon"></div>#}
+                {#                                            </td>#}
+                {#                                            <td class="coin-name">Euthorium</td>#}
+                {#                                            <td class="buy">30% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-down.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="sell">20% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-up.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="trends"><img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/trends-up-icon.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="attachments">$ 56746,857</td>#}
+                {#                                            <td class="stats-chart">#}
+                {#                                                <canvas id="mvaluechart3"></canvas>#}
+                {#                                            </td>#}
+                {#                                        </tr>#}
+                {#                                        <tr>#}
+                {#                                            <td class="mv-icon">#}
+                {#                                                <div class="mv-icon"><img#}
+                {#                                                        src="static/z_assets/images/icon/market-value/icon4.png"#}
+                {#                                                        alt="icon"></div>#}
+                {#                                            </td>#}
+                {#                                            <td class="coin-name">Bitcoindash</td>#}
+                {#                                            <td class="buy">30% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-down.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="sell">20% <img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/triangle-up.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="trends"><img#}
+                {#                                                    src="static/z_assets/images/icon/market-value/trends-up-icon.png"#}
+                {#                                                    alt="icon"></td>#}
+                {#                                            <td class="attachments">$ 56746,857</td>#}
+                {#                                            <td class="stats-chart">#}
+                {#                                                <canvas id="mvaluechart4"></canvas>#}
+                {#                                            </td>#}
+                {#                                        </tr>#}
+                {#                                    </table>#}
+                {#                                </div>#}
+                {#                            </div>#}
+                {#                        </div>#}
+                {#                    </div>#}
+                {#                </div>#}
+                {##}
+                {#            </div>#}
+                {#            <!-- market value area end -->#}
+                <!-- market value area start -->
+                <div class="row mt-5 mb-5">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-center">
+                                    <h4 class="header-title mb-0">LeaderBoard</h4>
+                                    {#                                <select class="custome-select border-0 pr-3">#}
+                                    {#                                    <option selected>Last 24 Hours</option>#}
+                                    {#                                    <option value="0">01 July 2018</option>#}
+                                    {#                                </select>#}
+                                </div>
+                                <div class="market-status-table mt-4">
+                                    <div class="table-responsive">
+                                        <table class="dbkit-table">
+                                            <tr class="heading-td" style="background-color: Silver"
+                                                style="background-color: Silver">
+                                                <td class="mv-icon"><b>Name</b></td>
+                                                <td class="coin-name"><b>Shoulder</b></td>
+                                                <td class="buy"><b>Chest</b></td>
+                                                <td class="sell"><b>Arms</b></td>
+                                                <td class="trends"><b>Legs</b></td>
+                                                <td class="attachments"><b>Back_abs</b></td>
+                                                <td class="stats-chart"><b>Sum</b></td>
+                                            </tr>
+                                            {% for f in get %}
+                                                <tr>
+                                                    <td class="mv-icon">{{ f.0 }}
+                                                    </td>
+                                                    <td class="coin-name">{{ f.1 }}</td>
+                                                    <td class="buy">{{ f.2 }}</td>
+                                                    <td class="sell">{{ f.3 }}</td>
+                                                    <td class="trends">{{ f.4 }}</td>
+                                                    <td class="attachments">{{ f.5 }}</td>
+                                                    <td class="stats-chart">
+                                                        {{ f.6 }}
+                                                    </td>
+                                                </tr>
+                                            {% endfor %}
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- market value area end -->
+                <!-- row area start -->
+                {#            <div id="chartdiv"></div>#}
+                <div class="row">
+                    <!-- Live Crypto Price area start -->
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Daily Total</h4>
+                                <div class="cripto-live mt-5">
+                                    <ul>
+                                        <li>
+                                            <div class="icon l">V</div>
+                                            <b>Date</b><span><b>  Total</b></span></li>
+                                        {% for f in fet %}
+
+                                            <li class="" id="{{ f.0 }}">
+                                                <button type="button" class="btn btn-light updatebutton"
+                                                        data-toggle="modal"
+                                                        data-target=".bd-example-modal-lg" style="padding: 0;margin: 0"
+                                                        member_id="{{ f.0 }}">
+                                                    <img src="https://img.icons8.com/color/48/000000/view-file.png"/>
+                                                </button>
+                                                {{ f.0 }}<span>{{ f.5 }}</span></li>
+
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Crypto Price area end -->
+                    <!-- trading history area start -->
+                    <div class="col-lg-8 mt-sm-30 mt-xs-30">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-sm-flex justify-content-between align-items-center">
+                                    <h4 class="header-title">Detail View</h4>
+                                    <div class="trd-history-tabs">
+                                        <ul class="nav" role="tablist">
+                                            {#                                        <li>#}
+                                            {#                                            <a class="active" data-toggle="tab" href="#buy_order" role="tab">Buy#}
+                                            {#                                                Order</a>#}
+                                            {#                                        </li>#}
+                                            {#                                        <li>#}
+                                            {#                                            <a data-toggle="tab" href="#sell_order" role="tab">Sell Order</a>#}
+                                            {#                                        </li>#}
+                                        </ul>
+                                    </div>
+                                    {#                                <select class="custome-select border-0 pr-3">#}
+                                    {#                                    <option selected>Detail View</option>#}
+                                    {#                                    <option value="0">01 July 2018</option>#}
+                                    {#                                </select>#}
+                                </div>
+                                <div class="trad-history mt-4">
+                                    <div class="tab-content" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="buy_order"
+                                             role="tabpanel">
+                                            <div class="table-responsive">
+                                                <table class="dbkit-table">
+                                                    <tr class="heading-td" style="background-color: Silver">
+
+                                                        <td><b>Date</b></td>
+                                                        <td><b>Shoulders</b></td>
+                                                        <td><b>Chest</b></td>
+                                                        <td><b>Arms</b></td>
+                                                        <td><b>Legs</b></td>
+                                                        <td><b>Back/Abs</b></td>
+                                                        <td><b>Total</b></td>
+
+                                                    </tr>
+                                                    {% for f in fet %}
+                                                        <tr>
+                                                            <td>{{ f.0 }}</td>
+                                                            <td>{{ f.1 }}</td>
+                                                            <td>{{ f.2 }}</td>
+                                                            <td>{{ f.3 }}</td>
+                                                            <td>{{ f.4 }}</td>
+                                                            <td>{{ f.5 }}</td>
+                                                            <td>{{ f.6 }}</td>
+                                                        </tr>
+                                                    {% endfor %}
+                                                    {#                                                <tr>#}
+                                                    {#                                                    <td>782782</td>#}
+                                                    {#                                                    <td>4.00 AM</td>#}
+                                                    {#                                                    <td>Pending</td>#}
+                                                    {#                                                    <td>$77878.90</td>#}
+                                                    {#                                                    <td>$7778.090</td>#}
+                                                    {#                                                </tr>#}
+                                                    {#                                                <tr>#}
+                                                    {#                                                    <td>89675978</td>#}
+                                                    {#                                                    <td>4.00 AM</td>#}
+                                                    {#                                                    <td>Pending</td>#}
+                                                    {#                                                    <td>$0768.90</td>#}
+                                                    {#                                                    <td>$0945.090</td>#}
+                                                    {#                                                </tr>#}
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="sell_order" role="tabpanel">
+                                            <div class="table-responsive">
+                                                <table class="dbkit-table">
+                                                    <tr class="heading-td">
+                                                        <td>Trading ID</td>
+                                                        <td>Time</td>
+                                                        <td>Status</td>
+                                                        <td>Amount</td>
+                                                        <td>Last Trade</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8964978</td>
+                                                        <td>4.00 AM</td>
+                                                        <td>Pending</td>
+                                                        <td>$445.90</td>
+                                                        <td>$094545.090</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>89675978</td>
+                                                        <td>4.00 AM</td>
+                                                        <td>Pending</td>
+                                                        <td>$78.90</td>
+                                                        <td>$074852945.090</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>78527878</td>
+                                                        <td>4.00 AM</td>
+                                                        <td>Pending</td>
+                                                        <td>$0768.90</td>
+                                                        <td>$65465.090</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- trading history area end -->
+                </div>
+                <!-- row area end -->
+                <div class="row mt-5">
+                    <!-- latest news area start -->
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title">Calculator</h4>
+                                <div class="letest-news mt-5">
+                                    <div class="single-post mb-xs-40 mb-sm-40">
+                                        <div class="lts-thumb">
+                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/1200px-QR_code_for_mobile_English_Wikipedia.svg.png"
+                                                 alt="post thumb">
+                                        </div>
+                                        <div class="lts-content">
+                                            {#                                                                        <span>Admin Post</span>#}
+                                            {#                                                                        <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>#}
+                                            {#                                                                        <p>There are many variations of passages of Lorem Ipsum available, but the#}
+                                            {#                                                                            majority have suffered alteration in some...</p>#}
+                                            <form>
+                                                <div class="form-gp">
+                                                    <label for="exampleInputName1"></label>
+                                                    <input type="text" id="paying" name="name" readonly
+                                                           value="{{ id }}">
+                                                    <i class="ti-user"></i>
+                                                    <div class="text-danger"></div>
+                                                </div>
+
+                                                <br>
+                                                <select name="cars" id="cars" class="updatepayment">
+                                                    {% for f in offer %}
+                                                        <option value="{{ f.0 }}" id="{{ f.2 }}">{{ f.1 }}
+                                                            || {{ f.2 }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                                <br>
+                                                <div class="form-gp">
+
+                                                    {#                                    <label for="exampleInputEmail">Amount</label>#}
+                                                    <input type="number" id="amounting" name="contact"
+                                                           placeholder="Amount" value="1500"
+                                                           readonly>
+                                                    <i class="ti-email"></i>
+                                                    <div class="text-danger">
+
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-gp">
+
+                                                        <label for="pay_id">Payment Id</label><input type="text"
+                                                                                                     id="pay_id">
+                                                        <i class="ti-email"></i>
+                                                        <div class="text-danger"></div>
+                                                    </div>
+                                                    <br>
+                                                    <div class="submit-btn-area">
+                                                        <button class="finalpay" id="form_submit" type="submit">Submit
+                                                            <i
+                                                                    class="ti-arrow-right"></i></button>
+                                                        <div class="login-other row mt-4">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+
+                                        </form>
+                                    </div>
+                                    <br>
+
+                                </div>
+{#                                <div class="single-post">#}
+{#                                    <div class="lts-thumb">#}
+{#                                        <img src="static/z_assets/images/blog/post-thumb2.jpg" alt="post thumb">#}
+{#                                    </div>#}
+{#                                    <div class="lts-content">#}
+{#                                        <span>Admin Post</span>#}
+{#                                        <h2><a href="blog.html">Sed ut perspiciatis unde omnis iste.</a></h2>#}
+{#                                        <p>There are many variations of passages of Lorem Ipsum available, but the#}
+{#                                            majority have suffered alteration in some...</p>#}
+{#                                    </div>#}
+{#                                </div>#}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- latest news area end -->
+                <!-- exchange area start -->
+                <div class="col-xl-6 mt-md-30 mt-xs-30 mt-sm-30">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="header-title">BMI</h4>
+                            <div class="exhcange-rate mt-5">
+
+                                <div class="input-form">
+                                    <input type="number" id="height">
+                                    <span>Height (in m)</span>
+                                </div>
+                                <div class="exchange-devider">To</div>
+                                <div class="input-form">
+                                    <input type="number" id="weight">
+                                    <span>Weight (in Kg)</span>
+                                </div>
+                                <div class="exchange-btn">
+                                    <button type="submit" onclick="BMI()">Calculate</button>
+                                    <div id="result"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- exchange area end -->
+            </div>
+            <!-- row area start-->
+        </div>
+    </div>
+    <!-- main content area end -->
+    <!-- footer area start-->
+    {#    <footer>#}
+    {#        <div class="footer-area">#}
+    {#            <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>#}
+    {#        </div>#}
+    {#    </footer>#}
+    <!-- footer area end-->
+</div>
+<!-- page container area end -->
+<!-- offset area start -->
+<div class="offset-area">
+    <div class="offset-close"><i class="ti-close"></i></div>
+    <ul class="nav offset-menu-tab">
+        <li><a class="active" data-toggle="tab" href="#activity">Activity</a></li>
+        <li><a data-toggle="tab" href="#settings">Settings</a></li>
+    </ul>
+    <div class="offset-content tab-content">
+        <div id="activity" class="tab-pane fade in show active">
+            <div class="recent-activity">
+                <div class="timeline-task">
+                    <div class="icon bg1">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Rashed sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg2">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Added</h4>
+                        <span class="time"><i class="ti-time"></i>7 Minutes Ago</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg2">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>You missed you Password!</h4>
+                        <span class="time"><i class="ti-time"></i>09:20 Am</span>
+                    </div>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg3">
+                        <i class="fa fa-bomb"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Member waiting for you Attention</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg3">
+                        <i class="ti-signal"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>You Added Kaji Patha few minutes ago</h4>
+                        <span class="time"><i class="ti-time"></i>01 minutes ago</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg1">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Ratul Hamba sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Hello sir , where are you, i am egerly waiting for you.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg2">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Rashed sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg2">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Rashed sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg3">
+                        <i class="fa fa-bomb"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Rashed sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+                <div class="timeline-task">
+                    <div class="icon bg3">
+                        <i class="ti-signal"></i>
+                    </div>
+                    <div class="tm-title">
+                        <h4>Rashed sent you an email</h4>
+                        <span class="time"><i class="ti-time"></i>09:35</span>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse distinctio itaque
+                        at.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="settings" class="tab-pane fade">
+            <div class="offset-settings">
+                <h4>General Settings</h4>
+                <div class="settings-list">
+                    <div class="s-settings">
+                        <div class="s-sw-title">
+                            <h5>Notifications</h5>
+                            <div class="s-swtich">
+                                <input type="checkbox" id="switch1"/>
+                                <label for="switch1">Toggle</label>
+                            </div>
+                        </div>
+                        <p>Keep it 'On' When you want to get all the notification.</p>
+                    </div>
+                    <div class="s-settings">
+                        <div class="s-sw-title">
+                            <h5>Show recent activity</h5>
+                            <div class="s-swtich">
+                                <input type="checkbox" id="switch2"/>
+                                <label for="switch2">Toggle</label>
+                            </div>
+                        </div>
+                        <p>The for attribute is necessary to bind our custom checkbox with the
+                            input.</p>
+                    </div>
+                    <div class="s-settings">
+                        <div class="s-sw-title">
+                            <h5>Show your emails</h5>
+                            <div class="s-swtich">
+                                <input type="checkbox" id="switch3"/>
+                                <label for="switch3">Toggle</label>
+                            </div>
+                        </div>
+                        <p>Show email so that easily find you.</p>
+                    </div>
+                    <div class="s-settings">
+                        <div class="s-sw-title">
+                            <h5>Show Task statistics</h5>
+                            <div class="s-swtich">
+                                <input type="checkbox" id="switch4"/>
+                                <label for="switch4">Toggle</label>
+                            </div>
+                        </div>
+                        <p>The for attribute is necessary to bind our custom checkbox with the
+                            input.</p>
+                    </div>
+                    <div class="s-settings">
+                        <div class="s-sw-title">
+                            <h5>Notifications</h5>
+                            <div class="s-swtich">
+                                <input type="checkbox" id="switch5"/>
+                                <label for="switch5">Toggle</label>
+                            </div>
+                        </div>
+                        <p>Use checkboxes when looking for yes or no answers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- offset area end -->
+<!-- jquery latest version -->
+<script src="static/z_assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="static/z_assets/js/popper.min.js"></script>
+<script src="static/z_assets/js/bootstrap.min.js"></script>
+<script src="static/z_assets/js/owl.carousel.min.js"></script>
+<script src="static/z_assets/js/metisMenu.min.js"></script>
+<script src="static/z_assets/js/jquery.slimscroll.min.js"></script>
+<script src="static/z_assets/js/jquery.slicknav.min.js"></script>
+
+<!-- start chart js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<!-- start highcharts js -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<!-- start zingchart js -->
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script>
+    zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+</script>
+<!-- all line chart activation -->
+<script src="static/z_assets/js/line-chart.js"></script>
+<!-- all pie chart -->
+<script src="static/z_assets/js/pie-chart.js"></script>
+<!-- others plugins -->
+<script src="static/z_assets/js/plugins.js"></script>
+<script src="static/z_assets/js/scripts.js"></script>
+<script type="text/javascript">
+    {#function test_func(data) {#}
+    {#    console.log(data);#}
+    // {#}#}
+    {#var z=test_func({{ data|safe }});#}
+    {#console.log(z);#}
+    var letters = {{ shoulder|safe }};
+    console.log(letters);
+    if ($('#coin_sales10').length) {
+        var ctx = document.getElementById("coin_sales10").getContext('2d');
+        var chart = new Chart(ctx, {
+            // The type of chart we want to create
+            type: 'line',
+            // The data for our dataset
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June", "July", "January", "February", "March", "April", "May"],
+                datasets: [{
+                    label: "Sales",
+                    backgroundColor: "rgba(117, 19, 246, 0.1)",
+                    borderColor: '#0b76b6',
+                    data: letters,
+                }]
+            },
+            // Configuration options go here
+            options: {
+                legend: {
+                    display: false
+                },
+                animation: {
+                    easing: "easeInOutBack"
+                },
+                scales: {
+                    yAxes: [{
+                        display: !1,
+                        ticks: {
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold",
+                            beginAtZero: !0,
+                            maxTicksLimit: 5,
+                            padding: 0
+                        },
+                        gridLines: {
+                            drawTicks: !1,
+                            display: !1
+                        }
+                    }],
+                    xAxes: [{
+                        display: !1,
+                        gridLines: {
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 0,
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold"
+                        }
+                    }]
+                }
+            }
+        });
+    }
+</script>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script>
+    if ($('#amlinechart3').length) {
+        var chartData = generateChartData();
+        var chart = AmCharts.makeChart("amlinechart3", {
+            "type": "serial",
+            "theme": "light",
+            "marginRight": 20,
+            "autoMarginOffset": 20,
+            "marginTop": 7,
+            "dataProvider": chartData,
+            "valueAxes": [{
+                logarithmic: true,
+                "axisAlpha": 0.2,
+                "dashLength": 1,
+                "position": "left"
+            }],
+            "mouseWheelZoomEnabled": true,
+            "graphs": [{
+                "id": "g1",
+                "balloonText": "[[value]]",
+                "bullet": "round",
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "hideBulletsCount": 50,
+                "title": "red line",
+                "valueField": "visits",
+                "useLineColorForBulletBorder": true,
+                "balloon": {
+                    "drop": true
+                }
+            }],
+            "chartScrollbar": {
+                "autoGridCount": true,
+                "graph": "g1",
+                "scrollbarHeight": 40,
+                "color": "#fff",
+                "selectedBackgroundAlpha": 1,
+                "selectedBackgroundColor": "#815BF6",
+                "selectedGraphFillAlpha": 0,
+                "selectedGraphFillColor": "#8918FE",
+                "graphLineAlpha": 0.2,
+                "graphLineColor": "#c2c2c2",
+                "selectedGraphLineColor": "#fff",
+                "selectedGraphLineAlpha": 1
+            },
+            "chartCursor": {
+                "limitToGraph": "g1"
+            },
+            "categoryField": "date",
+            "categoryAxis": {
+                "parseDates": true,
+                "axisColor": "#DADADA",
+                "dashLength": 1,
+                "minorGridEnabled": true
+            },
+            "export": {
+                "enabled": false
+            }
+        });
+
+        chart.addListener("rendered", zoomChart);
+        zoomChart();
+
+        // this method is called when chart is first inited as we listen for "rendered" event
+        function zoomChart() {
+            // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+            chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
+        }
+
+
+        // generate some random data, quite different range
+
+        // generate some random data, quite different range
+        {#    function generateChartData() {#}
+        {#        var chartData = [];#}
+        {#        var firstDate = new Date();#}
+        {#        firstDate.setDate(firstDate.getDate() - 5);#}
+        {#        // console.log(Date())#}
+        {#        var visits = 1200;#}
+        {#        for (var i = 0; i < 10; i++) {#}
+        {#            // we create date objects here. In your data, you can have date strings#}
+        {#            // and then set format of your dates using chart.dataDateFormat property,#}
+        {#            // however when possible, use date objects, as this will speed up chart rendering.#}
+        {#            var newDate = new Date(firstDate);#}
+        {#            newDate.setDate(newDate.getDate() + i);#}
+        {##}
+        {#            visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+        {#            console.log(newDate)#}
+        {#            chartData.push({#}
+        {#                // ##here###}
+        {#                date: newDate,#}
+        {#                visits: visits#}
+        {#            });#}
+        {#        }#}
+        {#        return chartData;#}
+        {#    }#}
+        {#  }#}
+        // generate some random data, quite different range
+
+        // generate some random data, quite different range
+        function generateChartData() {
+            var chartData = [];
+            var firstDate = new Date();
+            firstDate.setDate(firstDate.getDate() - 5);
+            // console.log(Date())
+            console.log({{ date|safe }});
+            console.log({{ value|safe }});
+            var date = {{ date|safe }};
+            console.log(date.length);
+            var z = {{ value|safe }};
+            {#var visits = 1200;#}
+            for (var i = 0; i < date.length; i++) {
+                // we create date objects here. In your data, you can have date strings
+                // and then set format of your dates using chart.dataDateFormat property,
+                // however when possible, use date objects, as this will speed up chart rendering.
+                var newDate = new Date(date[i]);
+                console.log(newDate);
+                var t = z[i];
+                {#newDate.setDate(newDate.getDate() + i);#}
+                {#console.log(newDate.setDate(newDate.getDate() + i))#}
+                {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+                {#console.?log(newDate)#}
+                console.log(t);
+                chartData.push({
+                    // ##here##
+                    date: newDate,
+                    visits: t
+                });
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                {#console.log(typeof newDate)#}
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                console.log(chartData)
+            }
+            return chartData;
+        }
+    }
+</script>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/serial.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+<script>
+    if ($('#amlinechart5').length) {
+        var chartData = generateChartData();
+        console.log(chartData)
+        var chart = AmCharts.makeChart("amlinechart5", {
+            "type": "serial",
+            "theme": "light",
+            "marginRight": 20,
+            "marginTop": 17,
+            "autoMarginOffset": 20,
+            "dataProvider": chartData,
+            "valueAxes": [{
+                "logarithmic": true,
+                "dashLength": 1,
+                "guides": [{
+                    "dashLength": 6,
+                    "inside": true,
+                    "label": "average",
+                    "lineAlpha": 1,
+                    "value": 90.4
+                }],
+                "position": "left"
+            }],
+            "mouseWheelZoomEnabled": true,
+            "graphs": [{
+                "bullet": "round",
+                "id": "g1",
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "bulletSize": 7,
+                "lineThickness": 2,
+                "title": "Price",
+                "type": "smoothedLine",
+                "useLineColorForBulletBorder": true,
+                "valueField": "price"
+            }],
+            "chartScrollbar": {},
+            "chartCursor": {
+                "valueLineEnabled": true,
+                "valueLineBalloonEnabled": true,
+                "valueLineAlpha": 0.5,
+                "fullWidth": true,
+                "cursorAlpha": 0.05
+            },
+            "dataDateFormat": "YYYY-MM-DD",
+            "categoryField": "date",
+            "categoryAxis": {
+                "parseDates": true
+            },
+            "export": {
+                "enabled": false
+            }
+        });
+
+        chart.addListener("dataUpdated", zoomChart);
+        chart.addListener("rendered", zoomChart);
+
+        function zoomChart() {
+            chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
+        }
+
+        function zoomChart() {
+            chart.zoomToDates(new Date(2012, 2, 2), new Date(2012, 2, 10));
+        }
+
+        function generateChartData() {
+            var chartData = [];
+            var firstDate = new Date();
+            firstDate.setDate(firstDate.getDate() - 5);
+            // console.log(Date())
+            {#console.log({{ date|safe }});#}
+            {#console.log({{ value|safe }});#}
+            var date = {{ date|safe }};
+            console.log(date.length);
+            var z = {{ value|safe }};
+            {#var visits = 1200;#}
+
+            for (var i = 0; i < date.length; i++) {
+                // we create date objects here. In your data, you can have date strings
+                // and then set format of your dates using chart.dataDateFormat property,
+                // however when possible, use date objects, as this will speed up chart rendering.
+                var newDate = date[i];
+                {#console.log(newDate);#}
+                var t = z[i];
+                {#newDate.setDate(newDate.getDate() + i);#}
+                {#console.log(newDate.setDate(newDate.getDate() + i))#}
+                {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+                {#console.?log(newDate)#}
+                {#console.log(t);#}
+                chartData.push({
+                    // ##here##
+                    date: newDate,
+                    price: t
+                });
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                {#console.log(typeof newDate)#}
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                console.log(chartData)
+            }
+            return chartData;
+        }
+    }
+</script>
+<script>
+    {#main#}
+    /*-------------- 4 line chart amchart start ------------*/
+    if ($('#amlinechart4').length) {
+        var all = {{ all|safe }};
+        var chart = AmCharts.makeChart("amlinechart4", {
+            "type": "serial",
+            "theme": "dark",
+            "legend": {
+                "useGraphSettings": true
+            },
+            "dataProvider": all,
+            "startDuration": 0.5,
+            "graphs": [{
+                "balloonText": "Shoulder : [[value]]",
+                "bullet": "round",
+                "hidden": false,
+                "title": "Shoulder",
+                "valueField": "Shoulder",
+                "fillAlphas": 0,
+                "lineColor": "#31ef98",
+                "lineThickness": 2,
+                "negativeLineColor": "#17e285"
+            }, {
+                "balloonText": "Chest : [[value]]",
+                "bullet": "round",
+                "title": "Chest",
+                "valueField": "Chest",
+                "fillAlphas": 0,
+                "lineColor": "#9656e7",
+                "lineThickness": 2,
+                "negativeLineColor": "#c69cfd"
+            }, {
+                "balloonText": "Arms : [[value]]",
+                "bullet": "round",
+                "title": "Arms",
+                "valueField": "Arms",
+                "fillAlphas": 0,
+                "lineColor": "#fd7e14",
+                "lineThickness": 2,
+                "negativeLineColor": "#fd7e14",
+            }, {
+                "balloonText": "Legs : [[value]]",
+                "hidden": false,
+                "bullet": "round",
+                "title": "Legs",
+                "valueField": "Legs",
+                "fillAlphas": 0,
+                "lineColor": "#dc3545",
+                "lineThickness": 2,
+                "negativeLineColor": "#dc3545",
+            }, {
+                "balloonText": "Back_abs : [[value]]",
+                "hidden": false,
+                "bullet": "round",
+                "title": "Back_abs",
+                "valueField": "Back_abs",
+                "fillAlphas": 0,
+                "lineColor": "#ffc107",
+                "lineThickness": 2,
+                "negativeLineColor": "#ffc107",
+            }, {
+                "balloonText": "Sum : [[value]]",
+                "hidden": false,
+                "bullet": "round",
+                "title": "Sum",
+                "valueField": "sum",
+                "fillAlphas": 0,
+                "lineColor": "#343a40",
+                "lineThickness": 2,
+                "negativeLineColor": "#343a40",
+            }],
+            "chartCursor": {
+                "cursorAlpha": 0,
+                "zoomable": false
+            },
+            "categoryField": "Date",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "fillAlpha": 0.05,
+                "fillColor": "#000000",
+                "gridAlpha": 0,
+                "position": "top"
+            },
+            "export": {
+                "enabled": false
+            }
+        });
+    }
+</script>
+{#//                                     Shoulder#}
+<script>
+    if ($('#amlinechart6').length) {
+        var chartData = generateChartData();
+        var chart = AmCharts.makeChart("amlinechart5", {
+            "type": "serial",
+            "theme": "light",
+            "marginRight": 20,
+            "autoMarginOffset": 20,
+            "marginTop": 7,
+            "dataProvider": chartData,
+            "valueAxes": [{
+                logarithmic: true,
+                "axisAlpha": 0.2,
+                "dashLength": 1,
+                "position": "left"
+            }],
+            "mouseWheelZoomEnabled": true,
+            "graphs": [{
+                "id": "g1",
+                "balloonText": "Shoulder : [[value]]",
+                "bullet": "round",
+                "bulletBorderAlpha": 1,
+                "bulletColor": "#FFFFFF",
+                "hideBulletsCount": 50,
+                "title": "red line",
+                "valueField": "visits",
+                "useLineColorForBulletBorder": true,
+                "balloon": {
+                    "drop": true
+                }
+            }],
+            "chartScrollbar": {
+                "autoGridCount": true,
+                "graph": "g1",
+                "scrollbarHeight": 40,
+                "color": "#fff",
+                "selectedBackgroundAlpha": 1,
+                "selectedBackgroundColor": "#815BF6",
+                "selectedGraphFillAlpha": 0,
+                "selectedGraphFillColor": "#8918FE",
+                "graphLineAlpha": 0.2,
+                "graphLineColor": "#c2c2c2",
+                "selectedGraphLineColor": "#fff",
+                "selectedGraphLineAlpha": 1
+            },
+            "chartCursor": {
+                "limitToGraph": "g1"
+            },
+            "categoryField": "date",
+            "categoryAxis": {
+                "parseDates": true,
+                "axisColor": "#DADADA",
+                "dashLength": 1,
+                "minorGridEnabled": true
+            },
+            "export": {
+                "enabled": false
+            }
+        });
+
+        chart.addListener("rendered", zoomChart);
+        zoomChart();
+
+        // this method is called when chart is first inited as we listen for "rendered" event
+        function zoomChart() {
+            // different zoom methods can be used - zoomToIndexes, zoomToDates, zoomToCategoryValues
+            chart.zoomToIndexes(chartData.length - 40, chartData.length - 1);
+        }
+
+        function generateChartData() {
+            var chartData = [];
+            var firstDate = new Date();
+            firstDate.setDate(firstDate.getDate() - 5);
+            // console.log(Date())
+            console.log({{ date|safe }});
+            console.log({{ value|safe }});
+            var date = {{ date|safe }};
+            console.log(date.length);
+            var z = {{ chest|safe }};
+            {#var visits = 1200;#}
+            for (var i = 0; i < date.length; i++) {
+                // we create date objects here. In your data, you can have date strings
+                // and then set format of your dates using chart.dataDateFormat property,
+                // however when possible, use date objects, as this will speed up chart rendering.
+                var newDate = new Date(date[i]);
+                console.log(newDate);
+                var t = z[i];
+                {#newDate.setDate(newDate.getDate() + i);#}
+                {#console.log(newDate.setDate(newDate.getDate() + i))#}
+                {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+                {#console.?log(newDate)#}
+                console.log(t);
+                chartData.push({
+                    // ##here##
+                    date: newDate,
+                    visits: t
+                });
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                {#console.log(typeof newDate)#}
+                {#console.log("ppppppppppppppppppppppppppppp")#}
+                console.log(chartData)
+            }
+            return chartData;
+        }
+    }
+</script>
+<script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+<script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+<style>
+    #shoulder {
+        width: 100%;
+        height: 400px;
+    }
+
+    #chest {
+        width: 100%;
+        height: 400px;
+    }
+
+    #arms {
+        width: 100%;
+        height: 400px;
+    }
+
+    #Legs {
+        width: 100%;
+        height: 400px;
+    }
+
+    #Back_abs {
+        width: 100%;
+        height: 400px;
+    }
+
+    #chartdiv {
+        width: 100%;
+        height: 600px;
+    }
+</style>
+<script>
+    {#################################### Shoulder #################################################}
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("shoulder", am4charts.XYChart);
+        {#chart.paddingRight = 20;#}
+        var hell_S = generateChartData_S();
+// Add data
+        chart.data = hell_S;
+
+// Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "date";
+        categoryAxis.renderer.minGridDistance = 50;
+        categoryAxis.renderer.grid.template.location = 0.5;
+        categoryAxis.startLocation = 0.5;
+        categoryAxis.endLocation = 0.5;
+
+// Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+
+// Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.categoryX = "date";
+        series.strokeWidth = 2;
+        series.tensionX = 0.77;
+
+// bullet is added because we add tooltip to a bullet for it to change color
+        var bullet = series.bullets.push(new am4charts.Bullet());
+        bullet.tooltipText = "{valueY}";
+
+        bullet.adapter.add("fill", function (fill, target) {
+            if (target.dataItem.valueY < 0) {
+                return am4core.color("#FF0000");
+            }
+            return fill;
+        })
+        var range = valueAxis.createSeriesRange(series);
+        range.value = 0;
+        range.endValue = -1000;
+        range.contents.stroke = am4core.color("#FF0000");
+        range.contents.fill = range.contents.stroke;
+
+// Add scrollbar
+        var scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+
+        chart.cursor = new am4charts.XYCursor();
+
+    }); // end am4core.ready()
+    function generateChartData_S() {
+        var chartData_S = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 5);
+        // console.log(Date())
+        {#console.log({{ date|safe }});#}
+        {#console.log({{ value|safe }});#}
+        var date = {{ date|safe }};
+        console.log(date.length);
+        var z = {{ value|safe }};
+        {#var visits = 1200;#}
+
+        for (var i = 0; i < date.length; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = date[i];
+            {#console.log(newDate);#}
+            var t = z[i];
+            {#newDate.setDate(newDate.getDate() + i);#}
+            {#console.log(newDate.setDate(newDate.getDate() + i))#}
+            {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+            {#console.?log(newDate)#}
+            {#console.log(t);#}
+            chartData_S.push({
+                // ##here##
+                date: newDate,
+                price: t
+            });
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            {#console.log(typeof newDate)#}
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            console.log(chartData_S)
+        }
+        return chartData_S;
+    }
+</script>
+<script>
+    {#################################### Chest #################################################}
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("chest", am4charts.XYChart);
+        {#chart.paddingRight = 20;#}
+        var hell_C = generateChartData_C();
+// Add data
+        chart.data = hell_C;
+
+// Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "date";
+        categoryAxis.renderer.minGridDistance = 50;
+        categoryAxis.renderer.grid.template.location = 0.5;
+        categoryAxis.startLocation = 0.5;
+        categoryAxis.endLocation = 0.5;
+
+// Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+
+// Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.categoryX = "date";
+        series.strokeWidth = 2;
+        series.tensionX = 0.77;
+
+// bullet is added because we add tooltip to a bullet for it to change color
+        var bullet = series.bullets.push(new am4charts.Bullet());
+        bullet.tooltipText = "{valueY}";
+
+        bullet.adapter.add("fill", function (fill, target) {
+            if (target.dataItem.valueY < 0) {
+                return am4core.color("#FF0000");
+            }
+            return fill;
+        })
+        var range = valueAxis.createSeriesRange(series);
+        range.value = 0;
+        range.endValue = -1000;
+        range.contents.stroke = am4core.color("#FF0000");
+        range.contents.fill = range.contents.stroke;
+
+// Add scrollbar
+        var scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+
+        chart.cursor = new am4charts.XYCursor();
+
+    }); // end am4core.ready()
+    function generateChartData_C() {
+        var chartData_C = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 5);
+        // console.log(Date())
+        {#console.log({{ date|safe }});#}
+        {#console.log({{ value|safe }});#}
+        var date = {{ date|safe }};
+        console.log(date.length);
+        var z = {{ chest|safe }};
+        {#var visits = 1200;#}
+
+        for (var i = 0; i < date.length; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = date[i];
+            {#console.log(newDate);#}
+            var t = z[i];
+            {#newDate.setDate(newDate.getDate() + i);#}
+            {#console.log(newDate.setDate(newDate.getDate() + i))#}
+            {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+            {#console.?log(newDate)#}
+            {#console.log(t);#}
+            chartData_C.push({
+                // ##here##
+                date: newDate,
+                price: t
+            });
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            {#console.log(typeof newDate)#}
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            console.log(chartData_C)
+        }
+        return chartData_C;
+    }
+</script>
+<script>
+    {#################################### Legs #################################################}
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("Legs", am4charts.XYChart);
+        {#chart.paddingRight = 20;#}
+        var hell_L = generateChartData_L();
+// Add data
+        chart.data = hell_L;
+
+// Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "date";
+        categoryAxis.renderer.minGridDistance = 50;
+        categoryAxis.renderer.grid.template.location = 0.5;
+        categoryAxis.startLocation = 0.5;
+        categoryAxis.endLocation = 0.5;
+
+// Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+
+// Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.categoryX = "date";
+        series.strokeWidth = 2;
+        series.tensionX = 0.77;
+
+// bullet is added because we add tooltip to a bullet for it to change color
+        var bullet = series.bullets.push(new am4charts.Bullet());
+        bullet.tooltipText = "{valueY}";
+
+        bullet.adapter.add("fill", function (fill, target) {
+            if (target.dataItem.valueY < 0) {
+                return am4core.color("#FF0000");
+            }
+            return fill;
+        })
+        var range = valueAxis.createSeriesRange(series);
+        range.value = 0;
+        range.endValue = -1000;
+        range.contents.stroke = am4core.color("#FF0000");
+        range.contents.fill = range.contents.stroke;
+
+// Add scrollbar
+        var scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+
+        chart.cursor = new am4charts.XYCursor();
+
+    }); // end am4core.ready()
+    function generateChartData_L() {
+        var chartData_L = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 5);
+        // console.log(Date())
+        {#console.log({{ date|safe }});#}
+        {#console.log({{ value|safe }});#}
+        var date = {{ date|safe }};
+        console.log(date.length);
+        var z = {{ Legs|safe }};
+        {#var visits = 1200;#}
+
+        for (var i = 0; i < date.length; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = date[i];
+            {#console.log(newDate);#}
+            var t = z[i];
+            {#newDate.setDate(newDate.getDate() + i);#}
+            {#console.log(newDate.setDate(newDate.getDate() + i))#}
+            {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+            {#console.?log(newDate)#}
+            {#console.log(t);#}
+            chartData_L.push({
+                // ##here##
+                date: newDate,
+                price: t
+            });
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            {#console.log(typeof newDate)#}
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            console.log(chartData_L)
+        }
+        return chartData_L;
+    }
+</script>
+<script>
+    {#################################### Arms #################################################}
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("arms", am4charts.XYChart);
+        {#chart.paddingRight = 20;#}
+        var hell_A = generateChartData_A();
+// Add data
+        chart.data = hell_A;
+
+// Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "date";
+        categoryAxis.renderer.minGridDistance = 50;
+        categoryAxis.renderer.grid.template.location = 0.5;
+        categoryAxis.startLocation = 0.5;
+        categoryAxis.endLocation = 0.5;
+
+// Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+
+// Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.categoryX = "date";
+        series.strokeWidth = 2;
+        series.tensionX = 0.77;
+
+// bullet is added because we add tooltip to a bullet for it to change color
+        var bullet = series.bullets.push(new am4charts.Bullet());
+        bullet.tooltipText = "{valueY}";
+
+        bullet.adapter.add("fill", function (fill, target) {
+            if (target.dataItem.valueY < 0) {
+                return am4core.color("#FF0000");
+            }
+            return fill;
+        })
+        var range = valueAxis.createSeriesRange(series);
+        range.value = 0;
+        range.endValue = -1000;
+        range.contents.stroke = am4core.color("#FF0000");
+        range.contents.fill = range.contents.stroke;
+
+// Add scrollbar
+        var scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+
+        chart.cursor = new am4charts.XYCursor();
+
+    }); // end am4core.ready()
+    function generateChartData_A() {
+        var chartData_A = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 5);
+        // console.log(Date())
+        {#console.log({{ date|safe }});#}
+        {#console.log({{ value|safe }});#}
+        var date = {{ date|safe }};
+        console.log(date.length);
+        var z = {{ Arms|safe }};
+        {#var visits = 1200;#}
+
+        for (var i = 0; i < date.length; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = date[i];
+            {#console.log(newDate);#}
+            var t = z[i];
+            {#newDate.setDate(newDate.getDate() + i);#}
+            {#console.log(newDate.setDate(newDate.getDate() + i))#}
+            {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+            {#console.?log(newDate)#}
+            {#console.log(t);#}
+            chartData_A.push({
+                // ##here##
+                date: newDate,
+                price: t
+            });
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            {#console.log(typeof newDate)#}
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+        }
+        console.log("=============================Arms========================");
+        console.log(chartData_A);
+        console.log("=============================Arms========================");
+        return chartData_A;
+    }
+
+    {#################################### Back #################################################}
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("Back_abs", am4charts.XYChart);
+        {#chart.paddingRight = 20;#}
+        var hell_B = generateChartData_B();
+// Add data
+        chart.data = hell_B;
+
+// Create axes
+        var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "date";
+        categoryAxis.renderer.minGridDistance = 50;
+        categoryAxis.renderer.grid.template.location = 0.5;
+        categoryAxis.startLocation = 0.5;
+        categoryAxis.endLocation = 0.5;
+
+// Create value axis
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.baseValue = 0;
+
+// Create series
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.valueY = "price";
+        series.dataFields.categoryX = "date";
+        series.strokeWidth = 2;
+        series.tensionX = 0.77;
+
+// bullet is added because we add tooltip to a bullet for it to change color
+        var bullet = series.bullets.push(new am4charts.Bullet());
+        bullet.tooltipText = "{valueY}";
+
+        bullet.adapter.add("fill", function (fill, target) {
+            if (target.dataItem.valueY < 0) {
+                return am4core.color("#FF0000");
+            }
+            return fill;
+        })
+        var range = valueAxis.createSeriesRange(series);
+        range.value = 0;
+        range.endValue = -1000;
+        range.contents.stroke = am4core.color("#FF0000");
+        range.contents.fill = range.contents.stroke;
+
+// Add scrollbar
+        var scrollbarX = new am4charts.XYChartScrollbar();
+        scrollbarX.series.push(series);
+        chart.scrollbarX = scrollbarX;
+
+        chart.cursor = new am4charts.XYCursor();
+
+    }); // end am4core.ready()
+    function generateChartData_B() {
+        var chartData_B = [];
+        var firstDate = new Date();
+        firstDate.setDate(firstDate.getDate() - 5);
+        // console.log(Date())
+        {#console.log({{ date|safe }});#}
+        {#console.log({{ value|safe }});#}
+        var date = {{ date|safe }};
+        console.log(date.length);
+        var z = {{ Back_abs|safe }};
+        {#var visits = 1200;#}
+        console.log("====================");
+        console.log(z);
+        console.log("====================");
+        for (var i = 0; i < date.length; i++) {
+            // we create date objects here. In your data, you can have date strings
+            // and then set format of your dates using chart.dataDateFormat property,
+            // however when possible, use date objects, as this will speed up chart rendering.
+            var newDate = date[i];
+            {#console.log(newDate);#}
+            var t = z[i];
+            {#newDate.setDate(newDate.getDate() + i);#}
+            {#console.log(newDate.setDate(newDate.getDate() + i))#}
+            {#visits += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 10);#}
+            {#console.?log(newDate)#}
+            {#console.log(t);#}
+            chartData_B.push({
+                // ##here##
+                date: newDate,
+                price: t
+            });
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            {#console.log(typeof newDate)#}
+            {#console.log("ppppppppppppppppppppppppppppp")#}
+            console.log(chartData_B)
+        }
+        return chartData_B;
+    }
+</script>
+{#                            every#}
+<script>
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+        /**
+         * Chart design taken from Samsung health app
+         */
+
+        var chart = am4core.create("chartdiv", am4charts.XYChart);
+        chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+        chart.paddingRight = 40;
+
+        chart.data = [{
+            "name": "Monica",
+            "steps": 45688,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/monica.jpg"
+        }, {
+            "name": "Joey",
+            "steps": 35781,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/joey.jpg"
+        }, {
+            "name": "Ross",
+            "steps": 25464,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/ross.jpg"
+        }, {
+            "name": "Phoebe",
+            "steps": 18788,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/phoebe.jpg"
+        }, {
+            "name": "Rachel",
+            "steps": 15465,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/rachel.jpg"
+        }, {
+            "name": "Chandler",
+            "steps": 11561,
+            "href": "https://www.amcharts.com/wp-content/uploads/2019/04/chandler.jpg"
+        }];
+
+        var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+        categoryAxis.dataFields.category = "name";
+        categoryAxis.renderer.grid.template.strokeOpacity = 0;
+        categoryAxis.renderer.minGridDistance = 10;
+        categoryAxis.renderer.labels.template.dx = -40;
+        categoryAxis.renderer.minWidth = 120;
+        categoryAxis.renderer.tooltip.dx = -40;
+
+        var valueAxis = chart.xAxes.push(new am4charts.ValueAxis());
+        valueAxis.renderer.inside = true;
+        valueAxis.renderer.labels.template.fillOpacity = 0.3;
+        valueAxis.renderer.grid.template.strokeOpacity = 0;
+        valueAxis.min = 0;
+        valueAxis.cursorTooltipEnabled = false;
+        valueAxis.renderer.baseGrid.strokeOpacity = 0;
+        valueAxis.renderer.labels.template.dy = 20;
+
+        var series = chart.series.push(new am4charts.ColumnSeries);
+        series.dataFields.valueX = "steps";
+        series.dataFields.categoryY = "name";
+        series.tooltipText = "{valueX.value}";
+        series.tooltip.pointerOrientation = "vertical";
+        series.tooltip.dy = -30;
+        series.columnsContainer.zIndex = 100;
+
+        var columnTemplate = series.columns.template;
+        columnTemplate.height = am4core.percent(50);
+        columnTemplate.maxHeight = 50;
+        columnTemplate.column.cornerRadius(60, 10, 60, 10);
+        columnTemplate.strokeOpacity = 0;
+
+        series.heatRules.push({
+            target: columnTemplate,
+            property: "fill",
+            dataField: "valueX",
+            min: am4core.color("#e5dc36"),
+            max: am4core.color("#5faa46")
+        });
+        series.mainContainer.mask = undefined;
+
+        var cursor = new am4charts.XYCursor();
+        chart.cursor = cursor;
+        cursor.lineX.disabled = true;
+        cursor.lineY.disabled = true;
+        cursor.behavior = "none";
+
+        var bullet = columnTemplate.createChild(am4charts.CircleBullet);
+        bullet.circle.radius = 30;
+        bullet.valign = "middle";
+        bullet.align = "left";
+        bullet.isMeasured = true;
+        bullet.interactionsEnabled = false;
+        bullet.horizontalCenter = "right";
+        bullet.interactionsEnabled = false;
+
+        var hoverState = bullet.states.create("hover");
+        var outlineCircle = bullet.createChild(am4core.Circle);
+        outlineCircle.adapter.add("radius", function (radius, target) {
+            var circleBullet = target.parent;
+            return circleBullet.circle.pixelRadius + 10;
+        })
+
+        var image = bullet.createChild(am4core.Image);
+        image.width = 60;
+        image.height = 60;
+        image.horizontalCenter = "middle";
+        image.verticalCenter = "middle";
+        image.propertyFields.href = "href";
+
+        image.adapter.add("mask", function (mask, target) {
+            var circleBullet = target.parent;
+            return circleBullet.circle;
+        })
+
+        var previousBullet;
+        chart.cursor.events.on("cursorpositionchanged", function (event) {
+            var dataItem = series.tooltipDataItem;
+
+            if (dataItem.column) {
+                var bullet = dataItem.column.children.getIndex(1);
+
+                if (previousBullet && previousBullet != bullet) {
+                    previousBullet.isHover = false;
+                }
+
+                if (previousBullet != bullet) {
+
+                    var hs = bullet.states.getKey("hover");
+                    hs.properties.dx = dataItem.column.pixelWidth;
+                    bullet.isHover = true;
+
+                    previousBullet = bullet;
+                }
+            }
+        })
+
+    });
+</script>
+
+<style>
+    #pie_chart {
+        width: 100%;
+        height: 500px;
+    }
+
+</style>
+
+<script>
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("pie_chart", am4charts.PieChart);
+
+// Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+
+// Let's cut a hole in our Pie chart the size of 30% the radius
+        chart.innerRadius = am4core.percent(30);
+
+// Put a thick white border around each Slice
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeWidth = 2;
+        pieSeries.slices.template.strokeOpacity = 1;
+        pieSeries.slices.template
+            // change the cursor on hover to make it apparent the object can be interacted with
+            .cursorOverStyle = [
+            {
+                "property": "cursor",
+                "value": "pointer"
+            }
+        ];
+
+        pieSeries.alignLabels = false;
+        pieSeries.labels.template.bent = true;
+        pieSeries.labels.template.radius = 3;
+        pieSeries.labels.template.padding(0, 0, 0, 0);
+
+        pieSeries.ticks.template.disabled = true;
+
+// Create a base filter effect (as if it's not there) for the hover to return to
+        var shadow = pieSeries.slices.template.filters.push(new am4core.DropShadowFilter);
+        shadow.opacity = 0;
+
+// Create hover state
+        var hoverState = pieSeries.slices.template.states.getKey("hover"); // normally we have to create the hover state, in this case it already exists
+
+// Slightly shift the shadow and make it more prominent on hover
+        var hoverShadow = hoverState.filters.push(new am4core.DropShadowFilter);
+        hoverShadow.opacity = 0.7;
+        hoverShadow.blur = 5;
+
+// Add a legend
+        chart.legend = new am4charts.Legend();
+
+        chart.data = {{ pie_L|safe }};
+
+    }); // end am4core.ready()
+</script>
+<!-- Styles -->
+<style>
+    #pie_today {
+        width: 100%;
+        height: 500px;
+    }
+
+</style>
+
+
+<!-- Chart code -->
+<script>
+    am4core.ready(function () {
+
+// Themes begin
+        am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+        var chart = am4core.create("pie_today", am4charts.PieChart);
+
+// Add data
+        chart.data = {{ pie_T|safe }};
+
+// Add and configure Series
+        var pieSeries = chart.series.push(new am4charts.PieSeries());
+        pieSeries.dataFields.value = "litres";
+        pieSeries.dataFields.category = "country";
+        pieSeries.slices.template.stroke = am4core.color("#fff");
+        pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates initial animation
+        pieSeries.hiddenState.properties.opacity = 1;
+        pieSeries.hiddenState.properties.endAngle = -90;
+        pieSeries.hiddenState.properties.startAngle = -90;
+
+        chart.hiddenState.properties.radius = am4core.percent(0);
+
+
+    }); // end am4core.ready()
+</script>
+<script>
+    {#var up = document.getElementsByClassName('updateButton');#}
+    {#up.addEventListener("click", function () {#}
+    {#    alert("Hello World!");});#}
+    $(document).ready(function () {
+        $('.updatebutton').on('click', function () {
+            console.log("yo");
+            var member_id = $(this).attr('member_id');
+            console.log(member_id);
+            var tokken = document.getElementById('bottle').innerHTML;
+            console.log(tokken);
+            req = $.ajax({
+                url: '/View_Detail',
+                type: 'POST',
+                data: {date: member_id, tokken: tokken}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da[1].member_num);
+                console.log(da[1].member_num[0]);
+                console.log(da[1].member_num.length);
+                buildTable(da)
+            });
+        });
+
+        function buildTable(data) {
+            for (let i = 0; i < data[1].member_num.length; i++) {
+                var row = `<tr>
+                            <td>${data[1].member_num[i][0]}</td>
+                            <td>${data[1].member_num[i][1]}</td>
+                            <td>${data[1].member_num[i][2]}</td>
+                            <td>${data[1].member_num[i][3]}</td>
+                            <td>${data[1].member_num[i][4]}</td>
+                            <td>${data[1].member_num[i][5]}</td>
+                            <td>${data[1].member_num[i][6]}</td>
+                                    </tr>`;
+                console.log(row);
+                document.getElementsByTagName('tbody')[1].innerHTML += row;
+                console.log("added");
+                {#updateHTML(myTable, row);#}
+                {##}
+                {#function updateHTML(myTable, row) {#}
+                {#    var elem = document.getElementById(myTable);#}
+                {#    if (typeof elem !== 'undefined' && elem !== null) {#}
+                {#        elem.innerHTML = row;#}
+                {#    }#}
+                {#  }#}
+
+
+            }
+        }
+
+    });
+
+</script>
+<script>
+    /**
+     * @return {number}
+     */
+    function BMI() {
+        document.getElementById('result').innerHTML = document.getElementById('weight').value / (document.getElementById('height').value * document.getElementById('height').value);
+        {#return #}
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        $('.finalpay').on('click', function () {
+            console.log("yo");
+            var mem_id = document.getElementById('paying').value;
+            var pay_id = document.getElementById('payment').value;
+            var offer_id = document.getElementById('cars').value;
+            console.log(pay_id);
+            console.log(mem_id);
+            console.log(offer_id);
+
+            req = $.ajax({
+                url: '/payed',
+                type: 'POST',
+                data: {pay_id: pay_id, mem_id: mem_id, offer_id: offer_id}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da.val);
+                document.getElementById('amount').value = da.val;
+            });
+        });
+    });
+</script>
+<script>
+    <
+    script >
+    $(document).ready(function () {
+        $('.updatepayment').on('click', function () {
+            console.log("yo");
+            var name = document.getElementById('cars').value;
+            console.log(name);
+            req = $.ajax({
+                url: '/peeling',
+                type: 'POST',
+                data: {name: name}
+            });
+            req.done(function (data) {
+                var da = data;
+                console.log(da);
+                console.log(da.val);
+                document.getElementById('amounting').value = da.name;
+            });
+        });
+    });
+</script>
+</script>
+<
+/body>
+
+< /html>

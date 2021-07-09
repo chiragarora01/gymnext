@@ -1,0 +1,784 @@
+<!doctype html>
+<body class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Datatable - srtdash</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="static/z_assets/images/icon/favicon.ico">
+    <link rel="stylesheet" href="static/z_assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/themify-icons.css">
+    <link rel="stylesheet" href="static/z_assets/css/metisMenu.css">
+    <link rel="stylesheet" href="static/z_assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="static/z_assets/css/slicknav.min.css">
+    <!-- amcharts css -->
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all"/>
+    <!-- Start datatable css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap.min.css">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.jqueryui.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="static/z_assets/css/typography.css">
+    <link rel="stylesheet" href="static/z_assets/css/default-css.css">
+    <link rel="stylesheet" href="static/z_assets/css/styles.css">
+    <link rel="stylesheet" href="static/z_assets/css/responsive.css">
+    <!-- modernizr css -->
+    <script src="static/z_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <style>
+        th {
+            padding: 30px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    </style>
+
+</head>
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<!-- preloader area start -->
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+<!-- preloader area end -->
+<!-- page container area start -->
+<div class="page-container">
+    <!-- sidebar menu area start -->
+
+    <!-- sidebar menu area end -->
+    <!-- main content area start -->
+    <div class="main-content">
+        <!-- header area start -->
+        <div class="header-area">
+            <div class="row align-items-center">
+                <!-- nav and search button -->
+{#                <div class="col-md-6 col-sm-8 clearfix">#}
+{#                    <div class="nav-btn pull-left">#}
+{#                        <span></span>#}
+{#                        <span></span>#}
+{#                        <span></span>#}
+{#                    </div>#}
+{#                    #}
+{#                </div>#}
+                <!-- profile info & task notification -->
+{#                <div class="col-md-6 col-sm-4 clearfix">#}
+{#                    <ul class="notification-area pull-right">#}
+{#                        <li id="full-view"><i class="ti-fullscreen"></i></li>#}
+{#                        <li id="full-view-exit"><i class="ti-zoom-out"></i></li>#}
+{#                        <li class="dropdown">#}
+{#                            <i class="ti-bell dropdown-toggle" data-toggle="dropdown">#}
+{#                                <span>2</span>#}
+{#                            </i>#}
+{#                            <div class="dropdown-menu bell-notify-box notify-box">#}
+{#                                <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>#}
+{#                                <div class="nofity-list">#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>You have Changed Your Password</p>#}
+{#                                            <span>Just Now</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>New Commetns On Post</p>#}
+{#                                            <span>30 Seconds ago</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Some special like you</p>#}
+{#                                            <span>Just Now</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-comments-smiley btn-info"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>New Commetns On Post</p>#}
+{#                                            <span>30 Seconds ago</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-key btn-primary"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Some special like you</p>#}
+{#                                            <span>Just Now</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>You have Changed Your Password</p>#}
+{#                                            <span>Just Now</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb"><i class="ti-key btn-danger"></i></div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>You have Changed Your Password</p>#}
+{#                                            <span>Just Now</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        <li class="dropdown">#}
+{#                            <i class="fa fa-envelope-o dropdown-toggle" data-toggle="dropdown"><span>3</span></i>#}
+{#                            <div class="dropdown-menu notify-box nt-enveloper-box">#}
+{#                                <span class="notify-title">You have 3 new notifications <a href="#">view all</a></span>#}
+{#                                <div class="nofity-list">#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img1.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">Hey I am waiting for you...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img2.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">When you can connect with me...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img3.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">I missed you so much...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img4.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">Your product is completely Ready...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img2.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">Hey I am waiting for you...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img1.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">Hey I am waiting for you...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                    <a href="#" class="notify-item">#}
+{#                                        <div class="notify-thumb">#}
+{#                                            <img src="static/z_assets/images/author/author-img3.jpg" alt="image">#}
+{#                                        </div>#}
+{#                                        <div class="notify-text">#}
+{#                                            <p>Aglae Mayer</p>#}
+{#                                            <span class="msg">Hey I am waiting for you...</span>#}
+{#                                            <span>3:15 PM</span>#}
+{#                                        </div>#}
+{#                                    </a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </li>#}
+{#                        <li class="settings-btn">#}
+{#                            <i class="ti-settings"></i>#}
+{#                        </li>#}
+{#                    </ul>#}
+{#                </div>#}
+            </div>
+        </div>
+        <!-- header area end -->
+        <!-- page title area start -->
+        <div class="page-title-area">
+            <div class="row align-items-center">
+                <div class="col-sm-6">
+                    <div class="breadcrumbs-area clearfix">
+                        <h4 class="page-title pull-left">Dashboard</h4>
+                        <ul class="breadcrumbs pull-left">
+                            <li><a href="index.html">Home</a></li>
+                            <li><span>Datatable</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 clearfix">
+                    <div class="user-profile pull-right">
+                        <img class="avatar user-thumb" src="static/z_assets/images/author/avatar.png" alt="avatar">
+                        <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Admin <i
+                                class="fa fa-angle-down"></i></h4>
+                        <div class="dropdown-menu">
+{#                            <a class="dropdown-item" href="#">Message</a>#}
+{#                            <a class="dropdown-item" href="#">Settings</a>#}
+                            <a class="dropdown-item" href="#">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12 mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">Data Table Mine</h4>
+
+                    <table id="dataTable2" class="text-center"
+                           style="margin: 20px;padding: 50px;width: 100%;height: 100%">
+                        <thead class="text-capitalize">
+
+                        <input type="text" name="" id="myInput1" placeholder="search here" onkeyup="serarchfun_for1()">
+
+                        <tr>
+                            <th id="Name" onclick="myFunction(this.id)">Name</th>
+                            <th id="Contact" onclick="myFunction(this.id)">Contact</th>
+                            <th id="Address" onclick="myFunction(this.id)">Address</th>
+                            <th id="pay_id" onclick="myFunction(this.id)">Pay Id</th>
+                            <th id="payment_date" onclick="myFunction(this.id)">Payment Date</th>
+                            <th id="amount" onclick="myFunction(this.id)">Amount</th>
+                        </tr>
+
+                        <tbody id="myTable1"></tbody>
+                    </table>
+                </div>
+                <!-- Primary table end -->
+            </div>
+        </div>
+
+        <div class="col-12 mt-5">
+            <div class="card" style="margin: 20px">
+                <div class="card-body">
+                    <h4 class="header-title">Excercise Table
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModaladdexe">
+                            Add New Entry
+                        </button>
+                        <div class="modal fade cliseexe" id="exampleModaladdexe" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal cliseexe"
+                                                aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body" id="modal-body">
+                                        <form>
+                                            <div class="text-danger" id="msg"></div>
+                                            <div class="form-group">
+                                                <label> Name:</label>
+                                                <input type="text" class="form-control" name="offer" id="name"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label> Shoulder:</label>
+                                                <input type="number" class="form-control" name="offer" id="shoulder"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Chest</label>
+                                                <input type="number" class="form-control" name="offer" id="chest"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Legs</label>
+                                                <input type="number" class="form-control" name="offer" id="legs"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Arms</label>
+                                                <input type="number" class="form-control" name="offer" id="arms"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Back/Abs</label>
+                                                <input type="number" class="form-control" name="offer" id="back_abs"
+                                                >
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="button" class="btn btn-primary exampleModaladdexe112">Save changes
+                                        </button>
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('.exampleModaladdexe112').on('click', function () {
+                                                    console.log("yo");
+                                                    var name = document.getElementById('name').value;
+                                                    console.log(name);
+                                                    var shoulder = document.getElementById('shoulder').value;
+                                                    var chest = document.getElementById('chest').value;
+                                                    var legs = document.getElementById('legs').value;
+                                                    var arms = document.getElementById('arms').value;
+                                                    var back_abs = document.getElementById('back_abs').value;
+                                                    {#var name = document.getElementById('name').value;#}
+                                                    console.log(shoulder);
+                                                    console.log(chest);
+                                                    console.log(legs);
+                                                    console.log(arms);
+                                                    console.log(back_abs);
+
+                                                    req = $.ajax({
+                                                        url: '/updateexe',
+                                                        type: 'POST',
+                                                        data: {
+                                                            name: name,
+                                                            shoulder: shoulder,
+                                                            chest: chest,
+                                                            legs: legs,
+                                                            arms: arms,
+                                                            back_abs: back_abs
+                                                        }
+                                                    });
+                                                    req.done(function (data) {
+                                                        var da = data;
+                                                        console.log(da);
+                                                        if (da.result == "success") {
+                                                            $('#modal-body').fadeOut(1000).fadeIn(1000);
+                                                            document.getElementById('name').value = "";
+
+                                                            document.getElementById('shoulder').value = "";
+                                                            document.getElementById('chest').value = "";
+                                                            document.getElementById('legs').value = "";
+                                                            document.getElementById('arms').value = "";
+                                                            document.getElementById('back_abs').value = "";
+                                                            document.getElementById('msg').innerHTML = "Added succesfully";
+                                                        } else {
+                                                            $('#modelinf').fadeOut(1000).fadeIn(1000);
+                                                            document.getElementById('msg').innerHTML = "Failed to Add ,Something is wrong ";
+                                                        }
+                                                    });
+
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h4>
+                    <table id="dataTable2" class="text-center"
+                           style="margin: 20px;padding: 50px;width: 100%;height: 100%">
+                        <thead class="text-capitalize">
+                        <input type="text" name="" id="myInput2" placeholder="search here" onkeyup="serarchfun_for2()">
+                        <tr>
+                            <th id="Name" onclick="myFunction(this.id)">Id</th>
+                            <th id="Contact" onclick="myFunction(this.id)">Name</th>
+                            <th id="Address" onclick="myFunction(this.id)">Shoulder</th>
+                            <th id="pay_id" onclick="myFunction(this.id)">Chest</th>
+                            <th id="payment_date" onclick="myFunction(this.id)">Legs</th>
+                            <th id="amount" onclick="myFunction(this.id)">Arms</th>
+                            <th id="amount" onclick="myFunction(this.id)">Back/Abs</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+
+                        <tbody id="myTable2">
+                        {% for f in exe %}
+                            <tr>
+                                <td class="mv-icon">{{ f.0 }}</td>
+                                <td class="coin-name">{{ f.1 }}</td>
+                                <td class="coin-name">{{ f.2 }}</td>
+                                <td class="mv-icon">{{ f.3 }}</td>
+                                <td class="coin-name">{{ f.4 }}</td>
+                                <td class="coin-name">{{ f.5 }}</td>
+                                <td class="coin-name">{{ f.6 }}</td>
+
+                                <td class="buy">
+                                    {#                                    <button type="button" class="btn btn-warning">Edit</button>#}
+                                    <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal3">
+                                        Edit
+                                    </button>
+
+                                </td>
+                                <td class="sell">
+                                    <button type="button" class="btn btn-danger">Delete</button>
+                                </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+
+
+                </div>
+                <!-- Primary table end -->
+            </div>
+        </div>
+        <br><br>
+
+        <div class="col-12 mt-5">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="header-title">Offer Table
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModaladdoffer">
+                            Add New Entry
+                        </button>
+                        <div class="modal fade" id="exampleModaladdoffer" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body modelinf" id="modelinf">
+                                        <form>
+                                            <div class="text-danger" id="msg_offer"></div>
+                                            <div class="form-group">
+                                                <label>Offer Name:</label>
+                                                <input type="text" class="form-control" name="offer" id="name_of_offer"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Offer Price:</label>
+                                                <input type="number" class="form-control" name="offer" id="price"
+                                                >
+                                            </div>
+                                            <div class="form-group">
+                                                <label>No of Days:</label>
+                                                <input type="number" class="form-control" name="offer" id="nod"
+                                                >
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                        </button>
+                                        <button type="button" class="btn btn-primarya addoffer">Save changes</button>
+                                        <script>
+                                            $(document).ready(function () {
+                                                $('.addoffer').on('click', function () {
+                                                    console.log("yo");
+                                                    var name = document.getElementById('name_of_offer').value;
+                                                    console.log(name);
+                                                    var price = document.getElementById('price').value;
+                                                    var nod = document.getElementById('nod').value;
+                                                    {#var name = document.getElementById('name').value;#}
+                                                    console.log(name);
+                                                    console.log(nod);
+                                                    console.log(price);
+
+                                                    req = $.ajax({
+                                                        url: '/updateoffer',
+                                                        type: 'POST',
+                                                        data: {name: name, price: price, nod: nod}
+                                                    });
+                                                    req.done(function (data) {
+                                                        var da = data;
+                                                        console.log(da);
+                                                        if (da.result == "success") {
+                                                            $('#modelinf').fadeOut(1000).fadeIn(1000);
+                                                            document.getElementById('name_of_offer').value = "";
+
+                                                            document.getElementById('nod').value = "";
+                                                            document.getElementById('price').value = "";
+                                                            document.getElementById('msg_offer').innerHTML = "Added Successfully ";
+
+                                                        } else {
+                                                            $('#modelinf').fadeOut(1000).fadeIn(1000);
+                                                            document.getElementById('msg_offer').innerHTML = "Failed to Add ,Something is wrong ";
+                                                        }
+                                                    });
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </h4>
+                    <table id="dataTable2" class="text-center"
+                           style="margin: 20px;padding: 50px;width: 100%;height: 100%">
+                        <thead class="text-capitalize">
+                        <input type="text" name="" id="myInput3" placeholder="search here" onkeyup="serarchfun_for3()">
+
+                        <tr>
+                            <th id="Name1" onclick="myFunction(this.id)">Offer ID</th>
+                            <th id="Name" onclick="myFunction(this.id)">Offer Name</th>
+                            <th id="Contact" onclick="myFunction(this.id)">Price</th>
+                            <th>No of Days</th>
+
+                            <th>Edit/Delete</th>
+                        </tr>
+                        <tbody id="myTable3">
+                        {% for f in offer %}
+                            <tr>
+                                <td class="mv-icon">{{ f.0 }}
+                                </td>
+                                <td class="coin-name">{{ f.1 }}</td>
+                                <td class="coin-name">{{ f.2 }}</td>
+                                <td class="coin-name">{{ f.3 }}</td>
+
+                                <td>
+                                    <button type="button" class="btn btn-warning " data-toggle="modal"
+                                            data-target="#exampleModal1" id="{{ f.0 }}">
+                                        Edit
+                                    </button>
+                                    <button type="button" class="btn btn-danger wakao" id="{{ f.0 }}">Delete</button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Primary table end -->
+            </div>
+        </div>
+
+    </div>
+</div>
+</body>
+<script>
+    $(document).ready(function () {
+        $('.wakao').on('click', function () {
+            var f =$(this).attr('id').val();
+            console.log(f);
+        })
+    });
+</script>
+<script>
+    const serarchfun_for1 = () => {
+        filter = document.getElementById('myInput1').value.toUpperCase();
+        myTable = document.getElementById('myTable1');
+        tr = myTable.getElementsByTagName('tr');
+        console.log(filter);
+        console.log(myTable);
+        console.log(tr);
+        for (var i = 0 i < tr.length;
+        i++
+    )
+        {
+            td = tr[i].getElementsByTagName('td')[0];
+            console.log(td)
+            if (td) {
+                textvalue = td.textContent || td.innerHTML;
+
+                if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<script>
+    const serarchfun_for2 = () => {
+        filter = document.getElementById('myInput2').value.toUpperCase();
+        myTable = document.getElementById('myTable2');
+        tr = myTable.getElementsByTagName('tr');
+        console.log(filter)
+        console.log(myTable)
+        console.log(tr)
+
+        for (var i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName('td')[1];
+            console.log(td)
+            if (td) {
+                textvalue = td.textContent || td.innerHTML;
+
+                if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<script>
+    const serarchfun_for3 = () => {
+        filter = document.getElementById('myInput3').value.toUpperCase();
+        myTable = document.getElementById('myTable3');
+        tr = myTable.getElementsByTagName('tr');
+        console.log(filter)
+        console.log(myTable)
+        console.log(tr)
+
+        for (var i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName('td')[1];
+            console.log(td)
+            if (td) {
+                textvalue = td.textContent || td.innerHTML;
+
+                if (textvalue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+
+{#    #########################################################################################################################################}
+{##}
+{#    #########################################################################################################################################}
+{##}
+{#    #########################################################################################################################################}
+<!-- offset area end -->
+<!-- jquery latest version -->
+<script src="static/z_assets/js/vendor/jquery-2.2.4.min.js"></script>
+<!-- bootstrap 4 js -->
+<script src="static/z_assets/js/popper.min.js"></script>
+<script src="static/z_assets/js/bootstrap.min.js"></script>
+<script src="static/z_assets/js/owl.carousel.min.js"></script>
+{#    <script src="static/z_assets/js/metisMenu.min.js"></script>#}
+<script src="static/z_assets/js/jquery.slimscroll.min.js"></script>
+<script src="static/z_assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Start datatable js -->
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.3/js/responsive.bootstrap.min.js"></script>
+<!-- others plugins -->
+<script src="static/z_assets/js/plugins.js"></script>
+<script src="static/z_assets/js/scripts.js"></script>
+<script>
+    var datat = {{ userdata|safe }}
+
+        console.log(datat);
+
+    buildTable(datat);
+
+    function buildTable(data) {
+        for (let i = 0; i < data[1].length; i++) {
+            var row = `<tr>
+                            <td>${data[i][0]}</td>
+                            <td>${data[i][1]}</td>
+                            <td>${data[i][2]}</td>
+                            <td>${data[i][3]}</td>
+                            <td>${data[i][4]}</td>
+                            <td>${data[i][5]}</td>
+
+                                    </tr>`;
+            console.log(row);
+            document.getElementById('myTable1').innerHTML += row;
+            {#document.getElementsByTagName('tbody')[1].innerHTML += row;#}
+            {#console.log("added");#}
+            {#updateHTML(myTable, row);#}
+            {##}
+            {#function updateHTML(myTable, row) {#}
+            {#    var elem = document.getElementById(myTable);#}
+            {#    if (typeof elem !== 'undefined' && elem !== null) {#}
+            {#        elem.innerHTML = row;#}
+            {#    }#}
+            {#  }#}
+        }
+    }
+
+</script>
+<script>
+    function myFunction(clicked_id) {
+        var count = 0;
+        var tag = clicked_id;
+        console.log(tag);
+        $(document).ready(function () {
+
+
+            req = $.ajax({
+                url: '/sort',
+                type: 'POST',
+                data: {date: tag, count: count}
+            });
+            req.done(function (data) {
+                count = count + 1;
+                var da = data;
+                console.log(da);
+                console.log(da[1].member_num);
+                console.log(da[1].member_num[0]);
+                console.log(da[1].member_num.length);
+                buildTable(da)
+            });
+
+
+            function buildTable(data) {
+                for (let i = 0; i < data[1].member_num.length; i++) {
+                    var row = `<tr>
+                            <td>${data[1].member_num[i][0]}</td>
+                            <td>${data[1].member_num[i][1]}</td>
+                            <td>${data[1].member_num[i][2]}</td>
+                            <td>${data[1].member_num[i][3]}</td>
+                            <td>${data[1].member_num[i][4]}</td>
+                            <td>${data[1].member_num[i][5]}</td>
+                            <td>${data[1].member_num[i][6]}</td>
+                                    </tr>`;
+                    console.log(row);
+                    document.getElementsByTagName('tbody')[1].innerHTML += row;
+                    console.log("added");
+                    {#updateHTML(myTable, row);#}
+                    {##}
+                    {#function updateHTML(myTable, row) {#}
+                    {#    var elem = document.getElementById(myTable);#}
+                    {#    if (typeof elem !== 'undefined' && elem !== null) {#}
+                    {#        elem.innerHTML = row;#}
+                    {#    }#}
+                    {#  }#}
+
+
+                }
+            }
+
+        });
+    }
+</script>
+{#    <script>#}
+{#        function editfun(i) {#}
+{#            alert(i)#}
+{##}
+{#        }#}
+{#    </script>#}
+
+
+</html>
